@@ -1,0 +1,22 @@
+body{
+	font-size: 18px;
+	color: black;
+	background-color: blue;
+	font-family: 'Arial', serif;
+}
+/* header*/
+}
+.navbar-brand{
+	padding-top: 20px;
+}
+.navbar-brand h1 {
+	color: #fff;
+	margin-bottom: 0;
+	margin-top: 0;
+	text-transform: uppercase;
+	line-height: .80;
+	font-weight: bolder;
+}
+.navbar-brand a:hover, .navbar-brand a:focus {
+	text-decoration: none;
+}
