@@ -22,7 +22,16 @@ function getRequestObject() {
 
 // Makes an Ajax GET request to 'requestUrl'
 ajaxUtils.sendGetRequest = 
-  function(requestUrl, responseHandler, isJsonResponse) {
+  function(requestUrl, responseHandler, isJsonResponse = true) {
+    // $.ajax({
+    //   url: requestUrl,
+    //   type: "get",
+    //   dataType: isJsonResponse ? "json" : "text",
+    //   error: function (resp, err) {
+    //     console.log(err);
+    //   },
+    //   success: responseHandler
+    // })
     var request = getRequestObject();
     request.onreadystatechange = 
       function() { 
@@ -30,7 +39,7 @@ ajaxUtils.sendGetRequest =
                        responseHandler,
                        isJsonResponse); 
       };
-    request.open("GET", requestUrl, true);
+    request.open("GET", requestUrl, true);  
     request.send(null); // for POST only
   };
 
